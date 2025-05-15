@@ -43,12 +43,15 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Nome" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Mensagem" required></textarea>
-      <button type="submit" class="button">Enviar mensagem</button>
-    </form>
+    <form action="https://formsubmit.co/machadojp00@gmail.com" method="POST" class="contact-form">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://findtech.com.br/obrigado.html">
+  
+  <input type="text" name="nome" placeholder="Seu nome" required>
+  <input type="email" name="email" placeholder="Seu e-mail" required>
+  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+  <button type="submit" class="button">Enviar Mensagem</button>
+</form>
   </section>
 
   <footer>
