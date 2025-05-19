@@ -35,35 +35,17 @@ const servicos = [
     depoimentosEl.innerHTML += item;
   });
 
-  const form = document.getElementById("form-contato");
-  const contatoSection = document.getElementById("contato");
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
 
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/machadojp00@gmail.com", {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: formData
-      });
-
-      if (response.ok) {
-        contatoSection.innerHTML = `
-          <div class="mensagem-enviada">
-            <h2>Mensagem enviada com sucesso!</h2>
-            <p>Obrigado por entrar em contato. Responderemos em breve.</p>
-          </div>
-        `;
-      } else {
-        alert("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
-      }
-    } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao enviar o formulário.");
-    }
-  });
+document.getElementById("form-contato").addEventListener("submit", function (e) {
+  e.preventDefault();
+  showToast("Mensagem enviada com sucesso!");
+});

@@ -88,6 +88,28 @@ body {
     border: 1px solid #ccc;
   }
 
+  .toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #3182CE;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 9999;
+  right: 30px;
+  top: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
   @media (max-width: 425px) {
     header {
         display: flex;
