@@ -23,6 +23,10 @@ body {
       width: 340px;
   }
 
+  nav {
+    display: flex;
+  }
+
   nav a {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
