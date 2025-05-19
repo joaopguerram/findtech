@@ -13,8 +13,8 @@ const servicos = [
   ];
 
   const depoimentos = [
-    { nome: 'João Silva', texto: 'Excelente serviço! Rápido e profissional.' },
-    { nome: 'Maria Oliveira', texto: 'A FindTech criou o site perfeito para meu negócio.' }
+    { nome: 'João Guerra', texto: 'Excelente serviço! Rápido e profissional.' },
+    { nome: 'Luciano Machado', texto: 'A FindTech criou o site perfeito para meu negócio.' }
   ];
 
   const servicosEl = document.getElementById('servicos-lista');
